@@ -1,0 +1,89 @@
+:host {
+    flex-grow: 1;
+}
+
+.group {
+    display: flex;
+}
+
+.group-small {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-group-small {
+    display: flex;
+}
+
+.index {
+    display: flex;
+    width: 80px;
+    background-color: #555;
+    color: white;
+    font-size: 32px;
+    align-items: center;
+}
+
+.index-small {
+    width: 50px;
+    text-align: center;
+    background-color: #555;
+    color: white;
+    font-size: 32px;
+}
+
+.wine-image {
+    width: 240px;
+    margin: 14px;
+}
+
+.wine-image-small {
+    width: 100%;
+}
+
+.wine-label {
+    display: flex;
+    flex-grow: 1;
+    font-size: 34px;
+    color: #555;
+    align-items: center;
+    justify-content: center;
+}
+
+.wine-label-small {
+    font-size: 34px;
+    color: #555;
+    margin-left: 15px;
+}
+
+.wine-origin {
+    display: flex;
+    flex-grow: 1;
+    font-size: 18px;
+    color: #555;
+    align-items: center;
+    justify-content: center;
+}
+
+.wine-origin-small {
+    font-size: 18px;
+    color: #555;
+    margin-left: 15px;
+}
+
+.wine-price {
+    display: flex;
+    font-size: 44px;
+    width: 100px;
+    color: white;
+    background-color: pink;
+    align-items: center;
+    justify-content: center;
+}
+
+.wine-price-small {
+    font-size: 44px;
+    color: white;
+    background-color: pink;
+    text-align: center;
+}

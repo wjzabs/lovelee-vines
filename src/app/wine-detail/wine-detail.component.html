@@ -1,0 +1,11 @@
+<h3>Wine</h3>
+
+<abs-dynamic-form
+  [vm]="wine"
+  [vmDefinition]="wineDefinition"
+  [operation]="operation"
+  [errorMessage]="errorMessage"
+  (update)="updateWine($event)"
+  (create)="createWine($event)"
+>
+</abs-dynamic-form>

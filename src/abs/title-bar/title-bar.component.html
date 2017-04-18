@@ -1,0 +1,20 @@
+<!--*ngIf="!screenService.isLarge()"-->
+
+<div *screenBelowLarge class="title-bar-small">
+    <span class="glyphicon glyphicon-menu-hamburger"
+    (click)="menuService.toggleLeftSideMenu()"></span>
+    <div class="small-image-holder">
+      <img class="small-image" src="assets/logo.png" alt="Love-Lee Vines Logo">
+    </div>
+    <span class="glyphicon glyphicon-option-vertical"></span>
+</div>
+<!--*ngIf="screenService.isLarge()"-->
+<div *screenLarge class="title-bar user-title-bar">
+  <img src="assets/logo.png" class="logo-image" alt="Love-Lee Vines Logo">
+  <div class="menu-area">
+    <abs-top-bar></abs-top-bar>
+
+    <abs-menu *ngIf="!menuService.isVertical"></abs-menu>
+
+  </div>
+</div>

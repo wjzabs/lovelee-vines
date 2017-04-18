@@ -1,0 +1,5 @@
+<abs-panel *ngFor="let wine of wines; let i=index">
+    <div class="projected-title">Wines</div>
+    <app-wine-panel [wine]="wine" [index]="i+1">
+    </app-wine-panel>
+</abs-panel>

@@ -1,0 +1,47 @@
+<h3>Wine Maintenance</h3>
+<button class="btn btn-primary" (click)="createWine()">Add New Wine</button>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 25px">Id</th>
+      <th style="width: 120px">Label</th>
+      <th style="width: 120px">Category</th>
+      <th style="width: 120px">Origin</th>
+      <th style="width: 40px">Year</th>
+      <th style="width: 50px">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of wines">
+      <td>{{ row.id }}</td>
+      <td>{{ row.label }}</td>
+      <td>{{ row.category }}</td>
+      <td>{{ row.origin }}</td>
+      <td>{{ row.year }}</td>
+      <td>{{ row.price }}</td>
+      <td *ngIf="row.id != deleteId">
+        <button class="btn btn-sm btn-primary"
+        (click)="showWineDetail(row.id)">
+        Details
+        </button>
+        <button class="btn btn-sm btn-warning"
+        (click)="editWine(row.id)">
+        Edit
+        </button>
+        <button class="btn btn-sm btn-danger"
+        (click)="deleteWineQuestion(row.id)">
+        Delete
+        </button>   
+      </td>
+      <td *ngIf="row.id === deleteId && !isDeleting">
+        Delete this Wine?
+        <button class="btn btn-sm" (click)="cancelDelete()">Cancel</button>     
+        <button class="btn btn-sm btn-danger" (click)="deleteWine(row.id)">Delete</button>
+        <p *ngIf="deleteError">{{ deleteError }}</p>
+      </td>
+      <td *ngIf="row.id === deleteId && isDeleting">
+        Deleting ...
+      </td>
+    </tr>
+  </tbody>
+</table>
