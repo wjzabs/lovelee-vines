@@ -5,7 +5,7 @@ import { Router } from "@angular/router";
 
 @Injectable()
 export class UserService implements UserApi {
-    isAuthenticated = false;
+    isAuthenticated = true;
 
     user_name: string;
 

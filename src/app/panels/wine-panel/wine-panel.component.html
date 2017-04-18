@@ -1,18 +1,32 @@
 <div *screenLarge class="group">
   <div class="index">
-    <span>{{ index }}</span>
+    <span class="index-text">{{ index }}</span>
   </div>
   <div>
     <img class="wine-image" [src]="wine.img" [alt]="wine.label">
   </div>
-  <div class="wine-label">
-    <span>{{ wine.label }}</span>
+  <div class="wine-label-origin">
+    <div class="wine-label">
+      <span>{{ wine.label }}</span>
+    </div>
+    <div class="wine-origin">
+      <span>{{ wine.origin }} - {{ wine.year }}</span>
+    </div>
   </div>
-  <div class="wine-origin">
-    <span>{{ wine.origin }} - {{ wine.year }}</span>
+  <div class="wine-description-links">
+    <div class="wine-description">
+      <span>{{ wine.description }}</span>
+    </div>
+    <div class="wine-links">
+      <br/>
+      <a href="{{ wine.shop }}" target = "_blank">Shop</a>
+      <br/>
+      <a href="{{ wine.pair }}" target = "_blank">Pair</a>
+    </div>
   </div>
+
   <div class="wine-price">
-    <span>{{ wine.price }}</span>
+    <span>{{ wine.price | currency:'USD':true:'1.2-2'}}</span>
   </div>
 </div>
 

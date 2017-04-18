@@ -13,7 +13,7 @@ export class AppDataService {
             pair: "https://www.travelingvineyard.com/guide/24529/food-wine-pairings/sommology-search/?pairingID=W2241&amp;productID=25870"
         },
         {
-            id: 2, price: 0, category: "red-wines", img: "https://www.travelingvineyard.com/wp-content/uploads/2017/04/POR102_sq.jpg",
+            id: 2, price: 17.99, category: "red-wines", img: "https://www.travelingvineyard.com/wp-content/uploads/2017/04/POR102_sq.jpg",
             label: "Ignia", origin: "Portuguese Red Wine", year: "2015",
             description: "Opaque garnet hues in the glass. Dense with blackberry jam and red fruits; tobacco and earth notes with spices and vanilla as well. Silky ta…",
             shop: "https://shop.travelingvineyard.com/24529/product/POR102?GuideID=24529&amp;TastingID=484760&amp;HostName=Lee+Dillon",

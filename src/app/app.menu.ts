@@ -18,19 +18,19 @@ export let initialMenuItems: Array<MenuItem> = [
                 route: null,
                 submenu: [
                     {
-                        text: 'Wine1',
+                        text: 'Red',
                         icon: 'glyphicon-filter',
                         route: '/vines/wine-detail/Wine1', 
                         submenu: null                       
                     },
                     {
-                        text: 'Wine2',
+                        text: 'White',
                         icon: 'glyphicon-filter',
                         route: '/vines/wine-detail/Wine2', 
                         submenu: null                       
                     },
                     {
-                        text: 'Wine3',
+                        text: 'Sweet & Fizzy',
                         icon: 'glyphicon-filter',
                         route: '/vines/wine-detail/Wine3', 
                         submenu: null                       
@@ -38,13 +38,13 @@ export let initialMenuItems: Array<MenuItem> = [
                 ]
             },
             {
-                text: 'Top 3',
+                text: 'My Top 3',
                 icon: 'glyphicon-filter',
                 route: '/vines/wine-list/3', 
                 submenu: null                  
             },
             {
-                text: 'Top 10',
+                text: 'Party Top 3',
                 icon: 'glyphicon-filter',
                 route: '/vines/wine-list/10', 
                 submenu: null                  
