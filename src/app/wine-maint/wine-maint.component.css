@@ -4,7 +4,7 @@
 
 table {
     border-collapse: collapse;
-    margin: 10px;
+    width:100%;
     margin-top: 20px;
 }
 
@@ -26,4 +26,49 @@ td, th {
 
 .btn.btn-sm {
     width: 80px;
+        margin-right: 6px;
+}
+
+
+
+table.table { width: 100%; }
+
+.table th, .table td { 
+  text-align: left; 
+  padding: 0.25em;
+}
+
+.table tr { 
+  border-bottom: 1px solid #DDD;
+}
+tr:nth-of-type(odd) {
+    background:	 #ffb3ff
+}
+.command-btn-cell{
+        display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 6px 0 6px 6px;
+}
+.cmd-btn-header{
+    color:#333;
+    min-width:270px;
+    padding: 0;
+}
+@media screen and (max-width: 800px) {
+  tr { 
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0.5em 0;
+    border: 1px solid rgba(3,3,3,0.2);
+  }
+  td, th {
+    flex: 1 1 150px;
+    border: 0.5px solid rgba(3,3,3,0.2);
+  }
+  td.edit-buttons, td.empty {
+    /*flex: 1 0 90%;
+    text-align: center;*/
+  }
 }

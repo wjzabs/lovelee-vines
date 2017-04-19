@@ -4,15 +4,7 @@
 
 .group {
     display: flex;
-}
-
-.group-small {
-    display: flex;
-    flex-direction: column;
-}
-
-.title-group-small {
-    display: flex;
+        justify-content: flex-start;
 }
 
 .index-text {
@@ -22,7 +14,7 @@
 
 .index {
     display: flex;
-    width: 80px;
+    min-width: 40px;
     background-color: #555;
     color: white;
     font-size: 32px;
@@ -37,74 +29,78 @@
     color: white;
     font-size: 32px;
 }
-
+.wine-image-container{
+    width: 100%;
+    max-width: 240px;
+    padding-right: 14px;
+    margin-right: 14px;
+}
 .wine-image {
-    width: 240px;
+    max-width: 240px;
+    width: 100%;
     margin: 14px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .wine-image-small {
     width: 100%;
 }
 
-.wine-label-origin {
-    display: flex;
-    flex-direction: column;
+
+.wine-label-text{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+    margin-right: 10px;
     flex-grow: 1;
+}
+.wine-label-top{
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+.wine-label-name{
+float:left;
+white-space: nowrap;
+text-align: left;
     font-size: 34px;
     color: #555;
-    align-items: center;
-    justify-content: center;
 }
-
-.wine-label {
+.wine-label-origin{
+font-size: 20px;
+    color: #555;
     display: flex;
-    flex-grow: 1;
-    font-size: 34px;
-    color: #555;
-    align-items: center;
     justify-content: center;
-}
-
-.wine-label-small {
-    font-size: 18px;
-    color: #555;
-    margin-left: 15px;
-}
-
-.wine-origin {
-    display: flex;
-    flex-grow: 1;
-    font-size: 18px;
-    color: #555;
-    align-items: center;
-    justify-content: center;
-}
-
-.wine-origin-small {
-    font-size: 12px;
-    color: #555;
-    margin-left: 15px;
-}
-
-.wine-description-links {
-    display: flex;
     flex-direction: column;
+}
+.wine-label-middle{
+display:flex;
+    flex-direction: row;
     flex-grow: 1;
-    font-size: 18px;
-    color: #555;
-    padding: 20px;
-    align-items: center;
-    justify-content: center;
 }
 
-.wine-description {
-    display: flex;
-    flex-grow: 0;
-    font-size: 18px;
+.wine-label-bottom{
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+}
+.wine-label-link{
+    cursor: pointer;
     color: #555;
-    align-items: center;
-    justify-content: center;
+    padding: .5em;
+    border: 1px solid #333;
+    margin: 14px 0;
+    min-width: 60px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 2px;
+}
+.wine-label-link-shop{
+
+}
+.wine-label-link-pair{
+
 }
 
 .wine-price {
@@ -119,9 +115,44 @@
     justify-content: center;
 }
 
+.group-small {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-group-small {
+    display: flex;
+    flex-direction: row;
+}
+
+.wine-label-text-small{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 0 10px;
+    flex-wrap: wrap;
+}
 .wine-price-small {
     font-size: 44px;
     color: white;
     background-color: pink;
-    text-align: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding-right: 14px;
+}
+.footer-group-small{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+flex-wrap: wrap;
+}
+.small-footer-links{
+        display: flex;
+        padding-right: 14px;
+}
+.small-footer-links .wine-label-link{
+    margin-left:14px;
 }

@@ -3,12 +3,13 @@
 <table>
   <thead>
     <tr>
-      <th style="width: 25px">Id</th>
-      <th style="width: 120px">Label</th>
-      <th style="width: 120px">Category</th>
-      <th style="width: 120px">Origin</th>
-      <th style="width: 40px">Year</th>
-      <th style="width: 50px">Price</th>
+      <th >Id</th>
+      <th >Label</th>
+      <th >Category</th>
+      <th >Origin</th>
+      <th >Year</th>
+      <th >Price</th>
+      <th class="cmd-btn-header" ></th>
     </tr>
   </thead>
   <tbody>
@@ -19,7 +20,7 @@
       <td>{{ row.origin }}</td>
       <td>{{ row.year }}</td>
       <td>{{ row.price }}</td>
-      <td *ngIf="row.id != deleteId">
+      <td class="command-btn-cell" *ngIf="row.id != deleteId">
         <button class="btn btn-sm btn-primary"
         (click)="showWineDetail(row.id)">
         Details
@@ -33,7 +34,7 @@
         Delete
         </button>   
       </td>
-      <td *ngIf="row.id === deleteId && !isDeleting">
+      <td class="command-btn-cell" *ngIf="row.id === deleteId && !isDeleting">
         Delete this Wine?
         <button class="btn btn-sm" (click)="cancelDelete()">Cancel</button>     
         <button class="btn btn-sm btn-danger" (click)="deleteWine(row.id)">Delete</button>

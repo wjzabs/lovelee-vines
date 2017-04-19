@@ -47,10 +47,12 @@ span {
 
 .menu-item {
     padding: 10px 10px 10px 0;
+    display: flex;
 }
 
 .menu-item.vertical-menu {
     padding: 6px 6px 6px 0;
+    display: flex;
 }
 
 .menu-item:hover {
@@ -67,4 +69,9 @@ span {
 
 .router-link-active.vertical-menu {
     background-color: #cc00cc;
+}
+.menu-item-text{
+        display: flex;
+    flex-grow: 1;
+    margin-left: 5px;
 }

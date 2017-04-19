@@ -5,7 +5,7 @@
   <!--(click)="menuService.showingLeftSideMenu = item.submenu"-->
 
   <span class="glyphicon {{ item.icon }}"></span>
-  <span>{{ item.text}} </span>
+  <span class="menu-item-text" >{{ item.text}} </span>
 
   <span *ngIf="item.submenu && !menuService.isVertical && !parentIsPopup"
         class="glyphicon glyphicon-menu-down"></span>
