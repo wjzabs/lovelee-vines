@@ -20,6 +20,11 @@ import { AppDataService } from "app/services/app-data.service";
 import { WinePanelComponent } from './panels/wine-panel/wine-panel.component';
 import { ImagePanelComponent } from './panels/image-panel/image-panel.component';
 
+// import * as mdc from '../../node_modules/material-components-web';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,

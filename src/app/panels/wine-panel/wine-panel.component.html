@@ -8,17 +8,68 @@
 
   <div class="wine-label-text">
     <div class="wine-label-top">
-      <div class="wine-label-name">
-        <span>{{ wine.label }}</span>
+      <div class="wine-label-top-left">
+        <div class="wine-label-name">
+          <span>{{ wine.label }}</span>
+        </div>
+        <div class="wine-label-origin">
+          <span>{{ wine.origin }} - {{ wine.year }}</span>
+        </div>
+                  <div class="wine-type">
+        <img *ngIf="wine.category=='red-wines'" class="wine-avatar red-wine-avatar" src="assets/wbRed.png" />
+        <img *ngIf="wine.category=='white-wines'" class="wine-avatar white-wine-avatar" src="assets/wbWhite.png" />
+        <img *ngIf="wine.category=='sweet-and-fizzy'" class="wine-avatar saf-wine-avatar" src="assets/wbFizzy.png" />
       </div>
-      <div class="wine-label-origin">
-        <span>{{ wine.origin }} - {{ wine.year }}</span>
       </div>
+      <!--      <div class="wine-label-top-right">
+
+      </div>-->
+
     </div>
     <div class="wine-label-middle">
       <div class="wine-label-desc">
         <span>{{ wine.description }}</span>
       </div>
+    </div>
+
+    <div class="wine-label-rating">
+      <div *ngIf="(wine.score == 0)" class="wine-score" (click)="rateWine(1)">
+        <img class="wine-glass wine-glass-empty" src="assets/wgEmpty.png" />
+      </div>
+      <div *ngIf="(wine.score >= 1)" class="wine-score" (click)="rateWine(0)">
+        <img class="wine-glass wine-glass-full" src="assets/wgFull.png" />
+      </div>      
+      <div *ngIf="(wine.score <= 1)" class="wine-score" (click)="rateWine(2)">
+        <img class="wine-glass wine-glass-empty" src="assets/wgEmpty.png" />
+      </div>
+      <div *ngIf="(wine.score >= 2)" class="wine-score" (click)="rateWine(1)">
+        <img class="wine-glass wine-glass-full" src="assets/wgFull.png" />
+      </div>       
+      <div *ngIf="(wine.score <= 2)" class="wine-score" (click)="rateWine(3)">
+        <img class="wine-glass wine-glass-empty" src="assets/wgEmpty.png" />
+      </div>
+      <div *ngIf="(wine.score >= 3)" class="wine-score" (click)="rateWine(2)">
+        <img class="wine-glass wine-glass-full" src="assets/wgFull.png" />
+      </div>       
+      <div *ngIf="(wine.score <= 3)" class="wine-score" (click)="rateWine(4)">
+        <img class="wine-glass wine-glass-empty" src="assets/wgEmpty.png" />
+      </div>
+      <div *ngIf="(wine.score >= 4)" class="wine-score" (click)="rateWine(3)">
+        <img class="wine-glass wine-glass-full" src="assets/wgFull.png" />
+      </div> 
+      <div *ngIf="(wine.score <= 4)" class="wine-score" (click)="rateWine(5)">
+        <img class="wine-glass wine-glass-empty" src="assets/wgEmpty.png" />
+      </div>
+      <div *ngIf="(wine.score >= 5)" class="wine-score" (click)="rateWine(4)">
+        <img class="wine-glass wine-glass-full" src="assets/wgFull.png" />
+      </div> 
+    </div>
+  </div>
+
+
+  <div class="wine-label-menu">
+    <div class="wine-price">
+      <span>{{ wine.price | currency:'USD':true:'1.2-2'}}</span>
     </div>
     <div class="wine-label-bottom">
       <div class="wine-label-link wine-label-link-shop">
@@ -28,13 +79,8 @@
         <a href="{{ wine.pair }}" target="_blank">Pair</a>
       </div>
     </div>
-
   </div>
 
-
-  <div class="wine-price">
-    <span>{{ wine.price | currency:'USD':true:'1.2-2'}}</span>
-  </div>
 </div>
 
 <div *screenBelowLarge class="group-small">

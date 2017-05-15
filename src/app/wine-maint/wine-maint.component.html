@@ -1,5 +1,19 @@
 <h3>Wine Maintenance</h3>
 <button class="btn btn-primary" (click)="createWine()">Add New Wine</button>
+<div class="mdc-card wine-card">
+            <section class="mdc-card__header">
+              <div class="demo-card__avatar"></div>
+              <div>
+                <p class="mdc-card__title">Title</p>
+                <p class="mdc-card__subtitle">Subhead</p>
+              </div>
+            </section>
+            <section class="mdc-card__media">
+              <div class="material-image" width="262" height="262"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve"><g><rect x="0.3" y="0.5" width="300" height="300" class="material-image__background"></rect><g><path class="material-image--shape-circle" d="M124.5,171l26.3-45.5c-7.7-4.6-16.7-7.2-26.3-7.2c-28.6,0-51.7,23.2-51.7,51.7c0,28.6,23.2,51.7,51.7,51.7 c28.3,0,51.2-22.6,51.7-50.8H124.5z"></path><path class="material-image--shape-triangle" d="M176.2,170.1c0,0.3,0,0.6,0,1H228l-51.7-89.6l-25.5,44.1C166,134.5,176.2,151.1,176.2,170.1z"></path><path class="material-image--shape-intersection" d="M176.2,171c0-0.3,0-0.6,0-1c0-19-10.2-35.6-25.5-44.6L124.5,171H176.2z"></path></g></g></svg></div>
+            </section>
+            <section class="mdc-card__supporting-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</section>
+            <section class="mdc-card__actions"><button type="button" class="mdc-button mdc-button--raised mdc--theme-secondary">Button</button></section>
+          </div>
 <table>
   <thead>
     <tr>
@@ -21,7 +35,8 @@
       <td>{{ row.year }}</td>
       <td>{{ row.price }}</td>
       <td class="command-btn-cell" *ngIf="row.id != deleteId">
-        <button class="btn btn-sm btn-primary"
+        <div class="mdc-component__containers__primary">
+        <button class="mdc-button mdc-button--primary mdc-button--raised mdc-ripple-upgraded mdc-ripple-upgraded--foreground-deactivation"
         (click)="showWineDetail(row.id)">
         Details
         </button>
@@ -33,6 +48,9 @@
         (click)="deleteWineQuestion(row.id)">
         Delete
         </button>   
+
+        </div>
+
       </td>
       <td class="command-btn-cell" *ngIf="row.id === deleteId && !isDeleting">
         Delete this Wine?

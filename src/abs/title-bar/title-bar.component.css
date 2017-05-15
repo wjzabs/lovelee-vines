@@ -6,7 +6,8 @@
     flex-grow:1;
     display: flex;
     min-height: 80px;
-    /*background-color: #eee;*/
+background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .menu-area {
@@ -14,6 +15,7 @@
     flex-direction: column;
     flex-grow:1;
     padding-right:20px;
+    white-space: nowrap;
 }
 
 .title-bar-small {
@@ -47,4 +49,19 @@ span {
     font-size: 36;
     color:blue;
     text-align: center;
+}
+.app-logo{
+    background-image: url("../../assets/logoBG.png");
+        background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-position: 192px 0;
+    background-size: contain;
+}
+.app-name{
+font-family: 'Pacifico', cursive;
+    color: #7e56c1;
+    font-size: 50px;
+    margin-bottom: 10px;
 }

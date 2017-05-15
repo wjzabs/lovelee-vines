@@ -1,6 +1,7 @@
 import { Wine } from 'app/view-models/wine';
 import { Component, OnInit, Input } from '@angular/core';
 
+
 @Component({
   selector: 'app-wine-panel',
   templateUrl: './wine-panel.component.html',
@@ -14,6 +15,11 @@ export class WinePanelComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
+    this.wine['score'] = this.wine['score'] || 0;
+console.log(this.wine);
 
+  }
+rateWine(i){
+  this.wine['score'] = i;
+}
 }

@@ -15,7 +15,7 @@
 .index {
     display: flex;
     min-width: 40px;
-    background-color: #555;
+    background-color: #7e56c1;
     color: white;
     font-size: 32px;
 
@@ -25,21 +25,17 @@
 .index-small {
     width: 50px;
     text-align: center;
-    background-color: #555;
+    background-color: #7e56c1;
     color: white;
     font-size: 32px;
 }
 .wine-image-container{
     width: 100%;
-    max-width: 240px;
-    padding-right: 14px;
-    margin-right: 14px;
+    max-width: 250px;
 }
 .wine-image {
-    max-width: 240px;
+    max-width: 250px;
     width: 100%;
-    margin: 14px;
-        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .wine-image-small {
@@ -51,7 +47,7 @@
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-    margin-right: 10px;
+    margin-left: 10px;
     flex-grow: 1;
 }
 .wine-label-top{
@@ -59,6 +55,18 @@ display:flex;
 flex-direction: row;
 justify-content: space-between;
 flex-wrap: wrap;
+position: relative;
+}
+.wine-label-top-left{
+display:flex;
+flex-direction: column;
+justify-content: flex-start;
+}
+.wine-label-menu{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+        background-color: #b92864;
 }
 .wine-label-name{
 float:left;
@@ -82,21 +90,21 @@ display:flex;
 
 .wine-label-bottom{
 display:flex;
-flex-direction: row;
-justify-content: space-between;
+flex-direction: column;
+justify-content: flex-end;
 }
 .wine-label-link{
     cursor: pointer;
     color: #555;
     padding: .5em;
-    border: 1px solid #333;
-    margin: 14px 0;
+    margin: 0 10px 10px 10px;
     min-width: 60px;
     text-align: center;
     background-color: #fff;
     border-radius: 2px;
 }
-.wine-label-link-shop{
+.wine-label-link a{
+        color: #b92864;
 
 }
 .wine-label-link-pair{
@@ -105,11 +113,11 @@ justify-content: space-between;
 
 .wine-price {
     display: flex;
-    min-width: 150px;
-    font-size: 36px;
+    font-size: 24px;
     width: 100px;
+    font-style: italic;
     color: white;
-    background-color: pink;
+    font-family: 'Pacifico', cursive;
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -155,4 +163,28 @@ flex-wrap: wrap;
 }
 .small-footer-links .wine-label-link{
     margin-left:14px;
+}
+.wine-label-rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.wine-score{
+float:right;
+}
+.wine-glass{
+    width:100%;
+    max-width: 50px;
+}
+.wine-type{
+        position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.12), 0 1px 4px rgba(0,0,0,0.24);
+}
+.wine-avatar{
+        max-width: 24px;
 }

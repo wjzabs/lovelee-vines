@@ -1,5 +1,6 @@
 <nav>
-  <ul>
+  <img *ngIf="menuService.isVertical" class="nav-img" src="assets/navImage.png" />
+  <ul [ngClass]="{'horizontal': !menuService.isVertical }">
     <li *ngFor="let item of menuService.items">
       <abs-menu-item [item]="item"
                      [ngClass]="{'vertical-menu': menuService.isVertical }"
@@ -11,7 +12,7 @@
 
 <button
   *ngIf="!menuService.showingLeftSideMenu"
-  class="btn btn-sm"
+  class="btn btn-sm btn-menu-switch"
   [ngClass]="{'horizontal': !menuService.isVertical }"
   (click)="menuService.toggleOrientation()">
   <span *ngIf="menuService.isVertical" class="glyphicon glyphicon-menu-up"></span>
